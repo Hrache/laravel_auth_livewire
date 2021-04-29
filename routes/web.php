@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Livewire\Home;
 use App\Http\Livewire\Login;
+use App\Http\Livewire\CPanel;
 use App\Http\Livewire\Register;
 use App\Http\Livewire\TailwindDemo;
 
@@ -17,3 +18,10 @@ Route::post('/signin', [Login::class, 'signin'])->name('signin');
 Route::post('/register', [Register::class, 'signup'])->name('signup');
 
 Route::post('/logout', [Login::class, 'signout'])->name('signout');
+
+Route::middleware('auth')->group(function() {
+    Route::prefix('/cpanel')->name('cpanel.')->group(function() {
+        Route::get('/', CPanel::class)->name('index');
+        Route::put('/update', [CPanel::class, 'updateUser'])->name('update');
+    });
+});

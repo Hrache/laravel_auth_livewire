@@ -1,11 +1,25 @@
-<form class="w3-content w3-card w3-padding w3-round-large w3-border" action="{{ route('register') }}" method="post" style="max-width: 512px;">
-
+<form class="w3-content w3-padding w3-round-large w3-border" action="{{ route('register') }}" method="post" style="max-width: 512px;">
     @csrf
 
-    <input type="text" name="name" class="w3-input w3-margin-bottom" placeholder="Enter name here" value="{{ old('name') }}" required />
-    <input type="email" name="email" class="w3-input w3-margin-bottom" placeholder="Enter email here" value="{{ old('email') }}" required />
-    <input type="password" name="password" class="w3-input w3-margin-bottom" placeholder="Enter password here" value="{{ old('password') }}" required />
-    <input type="password_confirmation" name="password_confirmation" class="w3-input w3-margin-bottom" placeholder="Confirm password here" value="{{ old('password_confirmation') }}" required />
+    <div class="form-row">
+        <label for="name"><strong>{{ __('cpanel.name') }}</strong></label>
+        <input type="text" id="name" name="name" class="w3-input w3-margin-bottom" value="{{ old('name') }}" required />
+    </div>
+
+    <div class="form-row">
+        <label for="email"><strong>{{ __('cpanel.email') }}</strong></label>
+        <input type="email" id="email" name="email" class="w3-input w3-margin-bottom" value="{{ old('email') }}" required />
+    </div>
+
+    <div class="form-row">
+        <label for="password"><strong>{{ __('cpanel.password') }}</strong></label>
+        <input type="password" id="password" name="password" class="w3-input w3-margin-bottom" required />
+    </div>
+
+    <div class="form-row">
+        <label for="password_confirmation"><strong>{{ __('cpanel.password-confirmation') }}</strong></label>
+        <input type="password" id="password_confirmation" name="password_confirmation" class="w3-input w3-margin-bottom" required />
+    </div>
 
     <footer class="w3-bar">
         <button type="submit" class="w3-button w3-bar-item w3-red w3-tooltip">

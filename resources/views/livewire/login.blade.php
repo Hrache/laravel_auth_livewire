@@ -1,7 +1,14 @@
-<form class="w3-content w3-card w3-padding w3-round-large w3-border" action="{{ route('signin') }}" method="post" style="max-width: 512px;">
+<form class="w3-content w3-padding w3-round-large w3-border" action="{{ route('signin') }}" method="post" style="max-width: 512px;">
     @csrf
-    <input type="email" class="w3-input w3-margin-bottom" placeholder="Enter email here" name="email" value="{{ old('email') }}" required />
-    <input type="password" class="w3-input w3-margin-bottom" placeholder="Enter password here" name="password" value="{{ old('password') }}" required />
+    <div class="form-row">
+        <label for="email"><strong>{{ __('cpanel.email') }}</strong></label>
+        <input type="email" id="email" class="w3-input w3-margin-bottom" name="email" value="{{ old('email') }}" required />
+    </div>
+    
+    <div class="form-row">
+        <label for="password"><strong>{{ __('cpanel.password') }}</strong></label>
+        <input type="password" id="password" class="w3-input w3-margin-bottom" name="password" value="{{ old('password') }}" required />
+    </div>
 
     <footer class="w3-bar">
         <button type="submit" class="w3-button w3-bar-item w3-red w3-tooltip">

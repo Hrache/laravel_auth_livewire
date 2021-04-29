@@ -19,7 +19,7 @@ class Login extends Component
             request()->session()->regenerate();
 
             return redirect()
-                    ->route('home.index')
+                    ->route('cpanel.index')
                     ->withSuccess("You've been logged in successfully.");
         }
 
