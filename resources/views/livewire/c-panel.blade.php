@@ -134,7 +134,7 @@ $( document ).ready( function() {
         <h3>{{ __('cpanel.users-panel') }}</h3>
     </div>
 
-    <div class="w3-col s12 m8 l9 w3-padding" style="margin-bottom: 5vh;">
+    <div class="w3-col s12 m8 l9 w3-padding w3-border-left" style="margin-bottom: 5vh;">
         <h3>{{ __('cpanel.update-user') }}</h3>
 
         <form id="updateForm" action="{{ route('cpanel.update') }}" method="post" style="max-width: 512px;">

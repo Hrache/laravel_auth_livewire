@@ -1,8 +1,8 @@
 <section class="w3-content">
-    <span class="w3-xlarge" onclick="$( '#hometext' ).toggleClass( 'w3-hide' );" style="cursor: pointer;">
+    <span class="w3-xlarge" style="cursor: pointer;">
         Home page :)
     </span>
-    <section class="w3-block w3-hide w3-animate-opacity" id="hometext">
+    <section class="w3-block w3-animate-opacity" id="hometext">
         <div class="w3-panel w3-pale-red">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur eum id illo ipsam sed! Ad consectetur
             doloremque explicabo laboriosam odio officiis quae quidem, sint sit soluta tempora vel voluptas voluptates.
